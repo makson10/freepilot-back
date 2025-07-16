@@ -2,6 +2,7 @@ name: Build and test
 on: [push]
 jobs:
   Build-and-test:
+    name: 'Build and test'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

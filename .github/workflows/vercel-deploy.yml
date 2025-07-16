@@ -5,6 +5,7 @@ env:
 on: [push]
 jobs:
   Deploy:
+    name: 'Deploy to Vercel'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
