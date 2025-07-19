@@ -9,6 +9,7 @@ async function bootstrap() {
     .setTitle('Freepilot')
     .setDescription('Swagger API documentation for Freepilot')
     .setVersion('1.0')
+    .addBearerAuth()
     .build();
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, documentFactory);

@@ -17,7 +17,7 @@ export class AuthService {
 
   async signUp(user: SignUp): Promise<{ access_token: string }> {
     const newUser = await this.usersService.createNewUser(user);
-    if (!newUser.id) throw new BadRequestException();
+    if (!newUser.id) throw new UnauthorizedException();
 
     const payload = { id: newUser.id, email: newUser.email };
     return {
